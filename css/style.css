@@ -465,6 +465,81 @@ section h3 span {
   height: 80px;
 }
 
+#profit {
+  padding: 130px 0px;
+  background: url("../img/profit-bg.png") no-repeat center/cover;
+}
+#profit h3 {
+  color: #000;
+}
+#profit .slick-custom-prev, #profit .slick-custom-next {
+  background: linear-gradient(270deg, #FFAE66 -15.7%, #FF855D 100%);
+  box-shadow: 0px 7px 19px rgba(255, 155, 98, 0.5);
+  border-radius: 60px;
+  position: absolute;
+  border: none;
+  outline: none;
+  width: 54px;
+  height: 54px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  top: 50%;
+}
+#profit .slick-custom-prev {
+  left: -70px;
+}
+#profit .slick-custom-next {
+  right: -60px;
+}
+#profit .subtitle {
+  color: #232138;
+  font-family: Montserrat-Regular, sans-serif;
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#profit .slick-slider .slick-list {
+  padding: 50px 0px;
+}
+#profit .company-profit .profit-item {
+  border-radius: 12px;
+  background: #fff;
+  width: 275px;
+  padding: 30px;
+  margin-right: 20px;
+  outline: none !important;
+}
+#profit .company-profit .profit-item:last-child {
+  margin-right: 0;
+}
+#profit .company-profit .profit-item .prof-head {
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(35, 33, 56, 0.14);
+  margin-bottom: 25px;
+  height: 105px;
+}
+#profit .company-profit .profit-item .prof-head .prof-img {
+  margin-bottom: 20px;
+}
+#profit .company-profit .profit-item .prof-head .prof-title {
+  font-size: 19px;
+  color: #232138;
+  font-family: Montserrat-Medium, sans-serif;
+}
+#profit .company-profit .profit-item .prof-body .prof-lab {
+  color: rgba(35, 33, 56, 0.7);
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-family: Montserrat-Regular, sans-serif;
+}
+#profit .company-profit .profit-item .prof-body .prof-percent {
+  color: #232138;
+  font-size: 27px;
+  font-family: Montserrat-Bold, sans-serif;
+}
+
 #faq {
   background: url("../img/faq-bg.png") no-repeat center/cover;
   padding: 115px 0px;
@@ -668,17 +743,18 @@ footer .foot-wrap .foot-center nav ul a {
   font-family: Montserrat-Regular, sans-serif;
   text-decoration: none;
 }
-footer .foot-wrap .foot-center .documentation .documentations-item {
+footer .foot-wrap .foot-center .documentations .documentations-item {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
-footer .foot-wrap .foot-center .documentation .documentations-item img {
+footer .foot-wrap .foot-center .documentations .documentations-item img {
   margin-right: 15px;
 }
-footer .foot-wrap .foot-center .documentation .documentations-item a {
+footer .foot-wrap .foot-center .documentations .documentations-item a {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.44);
+  line-height: 23px;
   font-family: Montserrat-Regular, sans-serif;
 }
 footer .foot-wrap .foot-right .control {

@@ -4,6 +4,17 @@ $(function(){
     //     $('.window-popup-container.sign-container').addClass('active');
     // });
 
+
+    $('.company-profit').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        nextArrow: '<button id="next" class="slick-arrow slick-custom-next" type="button"><i class="fa fa-chevron-right"></i></button>',
+        prevArrow: '<button id="prev" class="slick-arrow slick-custom-prev" type="button"><i class="fa fa-chevron-left"></i></button>',
+    });
+
+
     $('.btn-login').on('click', function(e){
         e.preventDefault();
         $('.sign-container .sign-head a').removeClass('active');
