@@ -386,6 +386,101 @@ section
       margin-top: 35px
       width: 100%
       height: 80px
+
+
+#faq
+  background: url("../img/faq-bg.png") no-repeat center / cover
+  padding: 115px 0px
+  h3
+    margin-bottom: 85px
+    color: #000
+  #accordion
+    margin: 0 auto
+    div.group
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+      border-radius: 10px
+      overflow: hidden
+      margin-bottom: 20px
+      margin-top: 20px
+      &:after
+        display: block
+        content: ''
+        height: 1px
+        width: 100%
+        background: rgba(0, 0, 0, .08)
+        margin-top: 20px
+    h4
+      font-size: 20px
+      line-height: 30px
+      font-family: Montserrat-Bold, sans-serif
+      border: none
+      outline: none
+      display: flex
+      margin: 0
+      padding: 30px 35px
+      justify-content: space-between
+      align-items: center
+      position: relative
+      background: #F5F5F5
+      cursor: pointer
+      small
+        width: 50px
+        height: 50px
+        background: linear-gradient(270deg, #FFAE66 -15.7%, #FF855D 100%)
+        box-shadow: 0px 7px 19px rgba(255, 155, 98, 0.5)
+        border-radius: 50%
+        position: relative
+        &:hover
+          background: #fff
+          &:before
+            color: #FF7A4A
+      small:before
+        content: "\002B"
+        position: absolute
+        top: 50%
+        color: #fff
+        left: 50%
+        transform: translate(-50%, -50%)
+        &:hover
+          color: #FF7A4A
+
+
+      i
+        display: block
+        color: #F2C94C
+        font-size: 25px
+      span
+        display: none
+    h4 + div
+      padding: 20px 35px
+    h4.ui-accordion-header-active
+      color: #FFFFFF
+      //background: linear-gradient(270deg, #FFAE66 -15.7%, #FF855D 100%)
+      background: #FF9F63
+      &:after
+        content: ''
+        width: 100%
+        position: absolute
+        bottom: 0
+        display: block
+        height: 2px
+        background: rgba(255, 255, 255, .15)
+        margin-top: 10px
+    h4.ui-accordion-header-active + div
+      //background: linear-gradient(270deg, #FFAE66 -15.7%, #FF855D 100%)
+      background: #FF9F63
+    h4.ui-accordion-header-active + div p
+      color: #FFFFFF
+    h4.ui-accordion-header-active small:before
+      //transform: rotate(-180deg)
+      content: "\2212"
+
+    p
+      margin-top: 0
+      font-size: 18px
+      line-height: 30px
+      font-family: Montserrat-Medium, sans-serif
+
 #questions
   background: url("../img/quest-bg.png") no-repeat center / cover
   padding: 160px 0px
@@ -467,7 +562,7 @@ footer
             font-size: 16px
             font-family: Montserrat-Regular, sans-serif
             text-decoration: none
-      .documentations
+      .documentation
         .documentations-item
           display: flex
           align-items: center

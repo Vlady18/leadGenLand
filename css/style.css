@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "RobotoSlab-Bold";
   src: url("../fonts/RobotoSlab-Bold.eot") format("eot"), url("../fonts/RobotoSlab-Bold.woff") format("woff"), url("../fonts/RobotoSlab-Bold.ttf") format("truetype");
@@ -464,6 +465,113 @@ section h3 span {
   height: 80px;
 }
 
+#faq {
+  background: url("../img/faq-bg.png") no-repeat center/cover;
+  padding: 115px 0px;
+}
+#faq h3 {
+  margin-bottom: 85px;
+  color: #000;
+}
+#faq #accordion {
+  margin: 0 auto;
+}
+#faq #accordion div.group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#faq #accordion div.group:after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+#faq #accordion h4 {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: Montserrat-Bold, sans-serif;
+  border: none;
+  outline: none;
+  display: flex;
+  margin: 0;
+  padding: 30px 35px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: #F5F5F5;
+  cursor: pointer;
+}
+#faq #accordion h4 small {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(270deg, #FFAE66 -15.7%, #FF855D 100%);
+  box-shadow: 0px 7px 19px rgba(255, 155, 98, 0.5);
+  border-radius: 50%;
+  position: relative;
+}
+#faq #accordion h4 small:hover {
+  background: #fff;
+}
+#faq #accordion h4 small:hover:before {
+  color: #FF7A4A;
+}
+#faq #accordion h4 small:before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#faq #accordion h4 small:before:hover {
+  color: #FF7A4A;
+}
+#faq #accordion h4 i {
+  display: block;
+  color: #F2C94C;
+  font-size: 25px;
+}
+#faq #accordion h4 span {
+  display: none;
+}
+#faq #accordion h4 + div {
+  padding: 20px 35px;
+}
+#faq #accordion h4.ui-accordion-header-active {
+  color: #FFFFFF;
+  background: #FF9F63;
+}
+#faq #accordion h4.ui-accordion-header-active:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-top: 10px;
+}
+#faq #accordion h4.ui-accordion-header-active + div {
+  background: #FF9F63;
+}
+#faq #accordion h4.ui-accordion-header-active + div p {
+  color: #FFFFFF;
+}
+#faq #accordion h4.ui-accordion-header-active small:before {
+  content: "−";
+}
+#faq #accordion p {
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: Montserrat-Medium, sans-serif;
+}
+
 #questions {
   background: url("../img/quest-bg.png") no-repeat center/cover;
   padding: 160px 0px;
@@ -560,15 +668,15 @@ footer .foot-wrap .foot-center nav ul a {
   font-family: Montserrat-Regular, sans-serif;
   text-decoration: none;
 }
-footer .foot-wrap .foot-center .documentations .documentations-item {
+footer .foot-wrap .foot-center .documentation .documentations-item {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
-footer .foot-wrap .foot-center .documentations .documentations-item img {
+footer .foot-wrap .foot-center .documentation .documentations-item img {
   margin-right: 15px;
 }
-footer .foot-wrap .foot-center .documentations .documentations-item a {
+footer .foot-wrap .foot-center .documentation .documentations-item a {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.44);
   font-family: Montserrat-Regular, sans-serif;
