@@ -490,19 +490,19 @@ section h3 span {
   padding: 0px 40px;
   outline: none;
   width: 335px;
-  font-family: Montserrat-Regular;
+  font-family: Montserrat-Regular, sans-serif;
 }
 #questions .questions-wrap .quest-right form input::-webkit-input-placeholder {
-  font-family: Monteserrat-Regular;
+  font-family: Monteserrat-Regular, sans-serif;
 }
 #questions .questions-wrap .quest-right form input::-moz-placeholder {
-  font-family: Monteserrat-Regular;
+  font-family: Monteserrat-Regular, sans-serif;
 }
 #questions .questions-wrap .quest-right form input:-moz-placeholder {
-  font-family: Monteserrat-Regular;
+  font-family: Monteserrat-Regular, sans-serif;
 }
 #questions .questions-wrap .quest-right form input:-ms-input-placeholder {
-  font-family: Monteserrat-Regular;
+  font-family: Monteserrat-Regular, sans-serif;
 }
 #questions .questions-wrap .quest-right form button {
   width: 320px;
@@ -523,6 +523,99 @@ footer {
 }
 footer .foot-wrap {
   display: flex;
+  justify-content: space-between;
+}
+footer .foot-wrap .foot-left .pravo {
+  margin-top: 10px;
+  font-size: 12px;
+  font-family: Montserrat-Medium, sans-serif;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+footer .foot-wrap .foot-left .requisites {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  font-family: Montserrat-Medium, sans-serif;
+}
+footer .foot-wrap .foot-left .requisites div {
+  margin-bottom: 10px;
+}
+footer .foot-wrap .foot-center {
+  min-width: 450px;
+}
+footer .foot-wrap .foot-center nav {
+  display: block;
+  margin-bottom: 80px;
+}
+footer .foot-wrap .foot-center nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+footer .foot-wrap .foot-center nav ul a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-family: Montserrat-Regular, sans-serif;
+  text-decoration: none;
+}
+footer .foot-wrap .foot-center .documentations .documentations-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+footer .foot-wrap .foot-center .documentations .documentations-item img {
+  margin-right: 15px;
+}
+footer .foot-wrap .foot-center .documentations .documentations-item a {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.44);
+  font-family: Montserrat-Regular, sans-serif;
+}
+footer .foot-wrap .foot-right .control {
+  margin-bottom: 40px;
+}
+footer .foot-wrap .foot-right .control button {
+  height: 45px;
+  width: 250px;
+}
+footer .foot-wrap .foot-right .social {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+footer .foot-wrap .foot-right .social div {
+  font-size: 14px;
+  font-family: Montserrat-Medium;
+  color: #fff;
+  margin-right: 15px;
+}
+footer .foot-wrap .foot-right .social a {
+  display: block;
+  margin-right: 10px;
+}
+footer .foot-wrap .foot-right .social a:last-child {
+  margin-right: 0;
+}
+footer .foot-wrap .foot-right .contacts a {
+  display: block;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+footer .foot-wrap .foot-right .contacts .tel {
+  font-size: 24px;
+  font-family: Montserrat-Bold, sans-serif;
+  margin-bottom: 10px;
+}
+footer .foot-wrap .foot-right .contacts .mail {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-family: Montserrat-Medium, sans-serif;
+}
+footer .foot-wrap .foot-right .contacts .mail img {
+  margin-right: 10px;
 }
 
 .bottom-line {
