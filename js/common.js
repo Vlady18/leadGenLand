@@ -4,6 +4,14 @@ $(function(){
     //     $('.window-popup-container.sign-container').addClass('active');
     // });
 
+    document.querySelectorAll(".calc-range").forEach(function(el, i){
+        el.oninput = function() {
+            this.style.background = 'linear-gradient(90deg, #FFC08C 0%, #FF7A4A ' + this.value + '%, #fff ' + this.value + '%, white 100%)'
+        }
+        $(el).trigger('input');
+
+    });
+
 
     $('.company-profit').slick({
         infinite: true,

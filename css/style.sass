@@ -127,13 +127,29 @@ header
       text-decoration: none
 .first_screen
   background: #ffffff url(../img/first-bg.png) no-repeat center / cover
-  height: 100vh
+  margin-bottom: -6px
+  //height: 100vh
+  position: relative
+  &:after
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    content: ''
+    width: 100%
+    height: 50px
+    //border: 2px solid red
+    clip-path: inset(0 round 50% 50% 0 0 / 100% 100% 0 0)
+    background: #fff
 .flex
   display: flex
   align-items: center
 #main
-  height: calc(100% - 80px)
+  //height: calc(100% - 80px)
   overflow: hidden
+  padding-top: 50px
+  padding-bottom: 200px
   .container
     display: flex
     align-items: center
@@ -272,6 +288,7 @@ header
 
 #excell
   padding: 120px 0px
+  background: url("../img/excell-bg.png") no-repeat center / cover
   .container
     display: flex
     justify-content: space-between
@@ -386,9 +403,299 @@ section
       margin-top: 35px
       width: 100%
       height: 80px
+#calculator-sec
+  padding-top: 150px
+  padding-bottom: 100px
+  overflow: hidden
+  background: url("../img/calc-bg.png") no-repeat center / cover
+  h3
+    color: #000
+    margin-bottom: 65px
+  .container
+    display: flex
+    justify-content: space-between
+    .calc-img
+      margin-right: -250px
+  .calculator
+    width: 600px
+    height: fit-content
+    background: #FFFFFF
+    box-shadow: 0px 20px 69px rgba(0, 0, 0, 0.1)
+    border-radius: 12px
+    //padding: 50px
+    //padding-bottom: 0
+    .wrap-calc
+      padding: 50px
+    .calc-head
+      padding-bottom: 30px
+      border-bottom: 1px solid rgba(35, 33, 56, .14)
+      h4
+        color: #232138
+        margin: 0
+        margin-bottom: 15px
+        font-size: 30px
+        font-family: Montserrat-Bold, sans-serif
+      p
+        font-size: 16px
+        color: #232138
+        line-height: 25px
+        font-family: Montserrat-Regular, sans-serif
+    .calc-body
+      .calc-item
+        margin-top: 30px
+        .calc-label_head
+          display: flex
+          justify-content: space-between
+          margin-bottom: 15px
+          span
+            display: block
+            color: #232138
+          span.name
+            font-size: 16px
+            font-family: Montserrat-Bold, sans-serif
+          span.price
+            font-family: Montserrat-Black, sans-serif
+            font-size: 20px
+        .calc-field
+          width: 100%
+          input
+            width: 100%
+            display: block
+        .calc-label_bottom
+          margin-top: 15px
+          display: flex
+          justify-content: space-between
+          span
+            color: rgba(35, 33, 56, 0.7)
+            font-size: 14px
+            font-family: Montserrat-Regular
+    .mounth-invest
+      margin-top: 45px
+    .calculator-result
+      padding: 30px 50px
+      background: #FF8A48
+      box-shadow: 0px 20px 69px rgba(0, 0, 0, 0.1)
+      border-radius: 0px 0px 12px 12px
+      .result-list
+        display: flex
+        justify-content: space-between
+        color: rgba(255, 255, 255, .7)
+        .res-item
+          border-right: 1px solid #fff
+          padding-right: 15px
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          .label
+            font-size: 13px
+            font-family: Montserrat-Medium, sans-serif
+            line-height: 19px
+          .profit
+            font-size: 18px
+            font-family: Montserrat-Bold, sans-serif
+            line-height: 35px
+        .res-item.total
+          .label
+            font-size: 24px
+            color: #fff
+            font-family: Montserrat-Bold, sans-serif
+            line-height: 19px
+          .profit
+            font-size: 27px
+            font-family: Montserrat-Black, sans-serif
+            line-height: 40px
+            color: #fff
+
+
+
+  .checkbox
+    position: absolute
+    z-index: -1
+    opacity: 0
+    border: none
+    margin: 10px 0 0 20px
+    + label
+      position: relative
+      padding: 0 0 0 60px
+      cursor: pointer
+      font-size: 16px
+      color: #232138
+      font-family: Montserrat-Regular, sans-serif
+
+      &:before
+        content: ''
+        position: absolute
+        top: -4px
+        left: 0
+        width: 52px
+        height: 26px
+        border-radius: 13px
+        background: #EDEDED
+        transition: .2s
+
+      &:after
+        content: ''
+        position: absolute
+        top: -1px
+        left: 2px
+        width: 22px
+        height: 22px
+        border-radius: 10px
+        background: #FFF
+        //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)
+        border: none
+        transition: .2s
+        opacity: 1
+
+    &:checked + label
+      &:before
+        background: #FFB676
+
+      &:after
+        left: 29px
+
+    &:focus + label:before
+      //box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(255, 255, 0, 0.7)
+
+
+//input
+//  &[type='range']
+//    overflow: hidden
+//    -webkit-appearance: none
+//    outline: none
+//    background-color: #9a905d
+//
+//    &::-webkit-slider-runnable-track
+//      height: 50px
+//      -webkit-appearance: none
+//      color: #13bba4
+//      margin-top: -1px
+//
+//    &::-webkit-slider-thumb
+//      -webkit-appearance: none
+//      cursor: ew-resize
+//      box-shadow: -500px 0 0 500px #FFC08C
+//      width: 22px
+//      height: 22px
+//      border-radius: 50%
+//      background: linear-gradient(180deg, #FFC08C 0%, #FF7A4A 100%)
+
+  //
+  //&[type="range"]
+  //  &::-moz-range-progress
+  //    background-color: #43e5f7
+  //
+  //  &::-moz-range-track
+  //    background-color: #9a905d
+  //
+  //  &::-ms-fill-lower
+  //    background-color: #43e5f7
+  //
+  //  &::-ms-fill-upper
+  //    background-color: red
+
+input[type=range]
+  -webkit-appearance: none
+  margin: 10px 0
+  width: 100%
+  //overflow: hidden
+
+  &:focus
+    outline: none
+
+  &::-webkit-slider-runnable-track
+    width: 100%
+    height: 12.8px
+    cursor: pointer
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d
+    //background: #ac51b5;
+    background: rgba(157, 157, 157, .15)
+    border-radius: 25px
+    border: 0px solid #000101
+
+  &::-webkit-slider-thumb
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d
+    border: 0px solid #000000
+    height: 22px
+    width: 22px
+    border-radius: 50%
+    //background: #65001c
+    background: linear-gradient(180deg, #FFC08C 0%, #FF7A4A 100%)
+    cursor: pointer
+
+    -webkit-appearance: none
+    margin-top: -3.6px
+    //box-shadow: -400px 10px -10px 400px #FFC08C
+
+  &:focus::-webkit-slider-runnable-track
+    //background: #ac51b5;
+    background: rgba(157, 157, 157, .15)
+
+  &::-moz-range-track
+    width: 100%
+    height: 12.8px
+    cursor: pointer
+    animate: 0.2s
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d
+    background: rgba(157, 157, 157, .15)
+    border-radius: 25px
+    border: 0px solid #000101
+
+  &::-moz-range-thumb
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d
+    border: 0px solid #000000
+    height: 20px
+    width: 39px
+    border-radius: 7px
+    background: linear-gradient(180deg, #FFC08C 0%, #FF7A4A 100%)
+    cursor: pointer
+
+  &::-ms-track
+    width: 100%
+    height: 12.8px
+    cursor: pointer
+    animate: 0.2s
+    background: transparent
+    border-color: transparent
+    border-width: 39px 0
+    color: transparent
+
+  &::-ms-fill-lower, &::-ms-fill-upper
+    background: rgba(157, 157, 157, .15)
+    border: 0px solid #000101
+    border-radius: 50px
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d
+  &::-ms-thumb
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d
+    border: 0px solid #000000
+    height: 20px
+    width: 39px
+    border-radius: 7px
+    background: linear-gradient(180deg, #FFC08C 0%, #FF7A4A 100%)
+    cursor: pointer
+  &:focus
+    &::-ms-fill-lower, &::-ms-fill-upper
+      background: rgba(157, 157, 157, .15)
+
+
+
+
+
+
+
+
+
+
+
+
 #profit
   padding: 130px 0px
+  position: relative
   background: url("../img/profit-bg.png") no-repeat center / cover
+  .circle-img
+    position: absolute
+    top: -45px
+    right: 10%
   h3
     color: #000
   .slick-custom-prev, .slick-custom-next
@@ -455,8 +762,14 @@ section
 
 
 #faq
-  background: url("../img/faq-bg.png") no-repeat center / cover
-  padding: 115px 0px
+  background: url("../img/2faq.png") no-repeat center / cover
+  padding: 205px 0px
+  position: relative
+  margin-top: -81px
+  .circle-img
+    position: absolute
+    top: -90px
+    left: 0
   h3
     margin-bottom: 85px
     color: #000
@@ -468,6 +781,9 @@ section
       overflow: hidden
       margin-bottom: 20px
       margin-top: 20px
+      &:last-child
+        &:after
+          display: none
       &:after
         display: block
         content: ''
@@ -475,6 +791,7 @@ section
         width: 100%
         background: rgba(0, 0, 0, .08)
         margin-top: 20px
+
     h4
       font-size: 20px
       line-height: 30px
@@ -550,8 +867,9 @@ section
 
 
 #questions
-  background: url("../img/quest-bg.png") no-repeat center / cover
+  background: url("../img/q-bg.png") no-repeat center / cover
   padding: 160px 0px
+  padding-top: 220px
   .questions-wrap
     display: flex
     align-items: center
@@ -970,10 +1288,56 @@ input[type="checkbox"]:checked + label:after
   background: #1C6AC4
   text-transform: uppercase
   color: #fff
+.bar
+  font-size: 30px
+  color: #fff
+  display: none
+.mobile-img
+  display: none
 
+@media all and (max-width: 992px)
+  #main .container
+    flex-direction: column
+  #main .main_content
+    max-width: 100%
+    width: 100%
+  #main .main_img
+    margin-right: 0
+  .head_wrap nav
+    display: none
+  .head_wrap .control_panel
+    display: none
+  .bar
+    display: block
+  #econ_calendar .abs-top
+    display: none
 
-
-
+@media all and (max-width: 768px)
+  #consult
+    background: none
+  #econ_calendar h3
+    font-size: 27px
+    line-height: 40px
+  #econ_calendar p
+    font-size: 16px
+    line-height: 35px
+  #main .main_content h1
+    font-size: 28px
+    line-height: 38px
+  #main .main_content .wrap-checks .cheks-item img
+    margin-right: 10px
+    max-width: 30px
+  #main .main_content .wrap-checks
+    flex-direction: column
+    align-items: flex-start
+  #main .main_content button
+    width: 100%
+  #main .main_img img
+    display: none
+  .mobile-img
+    display: block
+  #main .main_content .wrap-checks
+    margin-bottom: 20px
 
 
 
