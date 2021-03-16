@@ -917,6 +917,8 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
   margin-top: 10px;
 }
 #faq #accordion h4.ui-accordion-header-active + div {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   background: #FF9F63;
 }
 #faq #accordion h4.ui-accordion-header-active + div p {
@@ -1486,8 +1488,67 @@ input[type=checkbox]:checked + label:after {
   #steps .steps-right .wrap-why .why-item {
     width: 100%;
   }
+
+  #questions .questions-wrap {
+    flex-direction: column;
+  }
+
+  #questions h3 {
+    text-align: left;
+  }
+
+  .quest-right {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  footer .foot-wrap {
+    flex-direction: column;
+  }
+
+  footer .foot-wrap .foot-center {
+    min-width: 100%;
+  }
+
+  footer .foot-wrap .foot-center nav ul {
+    justify-content: flex-start;
+  }
+  footer .foot-wrap .foot-center nav ul li {
+    margin-right: 10px;
+  }
+
+  footer .foot-wrap .foot-center nav ul a {
+    font-size: 12px;
+  }
+
+  footer .foot-wrap .foot-center nav {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  footer .foot-wrap .foot-right .control button {
+    width: 100%;
+  }
 }
 @media all and (max-width: 768px) {
+  #questions .questions-wrap .quest-right form {
+    flex-direction: column;
+  }
+
+  #questions .questions-wrap .quest-right form button {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  #questions {
+    padding: 50px 0px;
+  }
+
+  #questions .questions-wrap .quest-right form input {
+    width: 100%;
+  }
+
   #consult {
     background: none;
   }
@@ -1594,6 +1655,14 @@ input[type=checkbox]:checked + label:after {
   }
 }
 @media all and (max-width: 576px) {
+  #questions h3 {
+    font-size: 27px;
+  }
+
+  #questions .questions-wrap .quest-left p {
+    font-size: 18px;
+  }
+
   #calculator-sec h3 {
     font-size: 25px;
     margin-bottom: 20px;
