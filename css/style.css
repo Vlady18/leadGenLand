@@ -341,6 +341,7 @@ header .control_panel a {
 
 #excell {
   padding: 120px 0px;
+  overflow-x: hidden;
   background: url("../img/excell-bg.png") no-repeat center/cover;
 }
 #excell .container {
@@ -415,6 +416,10 @@ section h3 span {
   box-shadow: 0px 17px 36px rgba(0, 0, 0, 0.4);
   border-radius: 12px;
   width: 375px;
+  margin-right: 10px;
+}
+#why .wrap-why .why-item:last-child, #steps .wrap-why .why-item:last-child {
+  margin-right: 0;
 }
 #why .wrap-why .why-item p, #steps .wrap-why .why-item p {
   color: rgba(255, 255, 255, 0.7);
@@ -863,6 +868,7 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
 #faq #accordion h4 small {
   width: 50px;
   height: 50px;
+  min-width: 50px;
   background: linear-gradient(270deg, #FFAE66 -15.7%, #FF855D 100%);
   box-shadow: 0px 7px 19px rgba(255, 155, 98, 0.5);
   border-radius: 50%;
@@ -1442,6 +1448,44 @@ input[type=checkbox]:checked + label:after {
   #econ_calendar .abs-top {
     display: none;
   }
+
+  #excell .ex-tel {
+    display: none;
+  }
+
+  #excell .ex-wrap .ex-item p {
+    max-width: 100%;
+  }
+
+  #why .wrap-why, #steps .wrap-why {
+    flex-direction: column;
+  }
+
+  #why .wrap-why .why-item, #steps .wrap-why .why-item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  #calculator-sec .container .calc-img {
+    display: none;
+  }
+
+  #calculator-sec .calculator {
+    width: 100%;
+  }
+
+  #steps .steps-left img {
+    display: none;
+  }
+
+  #steps .steps-wrap {
+    flex-direction: column;
+  }
+
+  #steps .steps-right .wrap-why .why-item {
+    width: 100%;
+  }
 }
 @media all and (max-width: 768px) {
   #consult {
@@ -1473,8 +1517,18 @@ input[type=checkbox]:checked + label:after {
     align-items: flex-start;
   }
 
-  #main .main_content button {
+  #calculator-sec .calculator .calculator-result .result-list {
+    flex-wrap: wrap;
+  }
+
+  #calculator-sec .calculator .calculator-result .result-list .res-item.total {
     width: 100%;
+    margin-bottom: 15px;
+  }
+
+  #calculator-sec .calculator .calculator-result .result-list .res-item {
+    padding-right: 0;
+    border-right: 0;
   }
 
   #main .main_img img {
@@ -1487,6 +1541,163 @@ input[type=checkbox]:checked + label:after {
 
   #main .main_content .wrap-checks {
     margin-bottom: 20px;
+  }
+
+  #consult {
+    padding-bottom: 0;
+    padding-top: 50px;
+    background: url("../img/consult-bg.png") no-repeat center/cover;
+  }
+
+  #consult .mobile-img {
+    margin-top: 50px;
+    display: block;
+  }
+  #consult .mobile-img img {
+    display: block;
+  }
+
+  #consult .h3 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  #consult .consult-info p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  #consult .wrap-consult {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  #consult .wrap-consult .consult-item {
+    margin-bottom: 20px;
+  }
+
+  #faq #accordion h4 {
+    font-size: 13px;
+  }
+
+  #faq #accordion p {
+    font-size: 12px;
+  }
+
+  #faq #accordion h4 + div {
+    padding: 15px;
+  }
+
+  #faq #accordion h4 {
+    padding: 15px;
+  }
+}
+@media all and (max-width: 576px) {
+  #calculator-sec h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  #calculator-sec {
+    padding: 50px 0px;
+  }
+
+  #main .main_content button {
+    width: 100%;
+  }
+
+  #consult .control button {
+    width: 100%;
+  }
+
+  #excell {
+    padding: 70px 0px;
+  }
+
+  #excell h3 {
+    font-size: 27px;
+  }
+
+  #excell .ex-wrap .ex-item .title {
+    font-size: 16px;
+  }
+
+  #excell .ex-wrap .ex-item p {
+    font-size: 14px;
+  }
+
+  .ex-img img {
+    max-width: 50px;
+  }
+
+  #why h3 {
+    font-size: 27px;
+  }
+
+  #why .wrap-why .why-item p, #steps .wrap-why .why-item p {
+    font-size: 14px;
+  }
+
+  #why .wrap-why .why-head .title, #steps .wrap-why .why-head .title {
+    font-size: 18px;
+  }
+
+  #calculator-sec .calculator .calc-head h4 {
+    font-size: 15px;
+  }
+
+  #calculator-sec .calculator .calc-head p {
+    font-size: 10px;
+  }
+
+  #calculator-sec .calculator .calc-body .calc-item .calc-label_head span.name {
+    font-size: 12px;
+  }
+
+  #calculator-sec .calculator .calc-body .calc-item .calc-label_head span.price {
+    font-size: 16px;
+  }
+
+  #calculator-sec .calculator .wrap-calc {
+    padding: 25px;
+  }
+
+  #calculator-sec .checkbox + label {
+    font-size: 12px;
+  }
+
+  #calculator-sec .calculator .calculator-result .result-list .res-item .label {
+    font-size: 12px;
+  }
+
+  #calculator-sec .calculator .calculator-result {
+    padding: 25px;
+  }
+
+  #steps h3 {
+    font-size: 27px;
+  }
+
+  #steps {
+    padding: 50px 0px;
+  }
+
+  #why .wrap-why .why-item, #steps .wrap-why .why-item {
+    padding: 20px;
+  }
+
+  #steps .steps-right .wrap-why .why-item .title {
+    font-size: 16px;
+  }
+
+  #faq h3 {
+    font-size: 27px;
+  }
+
+  #faq {
+    padding: 50px 0px;
+    margin-top: 0;
   }
 }
 
