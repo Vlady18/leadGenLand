@@ -391,9 +391,9 @@ section h3 span {
 }
 
 #why {
-  background: #fff url("../img/why-bg.png") no-repeat center/cover;
-  padding-top: 115px;
-  padding-bottom: 150px;
+  background: #fff url("../img/z1.png") no-repeat 50% 100%/cover;
+  padding-top: 100px;
+  padding-bottom: 250px;
 }
 #why h3 {
   text-align: center;
@@ -486,7 +486,7 @@ section h3 span {
 }
 
 #calculator-sec {
-  padding-top: 150px;
+  padding-top: 50px;
   padding-bottom: 100px;
   overflow: hidden;
   background: url("../img/calc-bg.png") no-repeat center/cover;
@@ -1156,6 +1156,9 @@ footer .foot-wrap .foot-right .contacts .mail img {
   overflow: hidden;
   z-index: 999;
 }
+.window-popup-container .window-popup {
+  width: 100%;
+}
 .window-popup-container .sign_wrapper {
   width: 465px;
   margin: 0 auto;
@@ -1230,7 +1233,7 @@ footer .foot-wrap .foot-right .contacts .mail img {
   border-radius: 4px;
   font-size: 14px;
   line-height: 20px;
-  border-radius: 12px;
+  border-radius: 60px;
   font-family: Montserrat-Regular, sans-serif;
 }
 .window-popup-container .sign_wrapper .sign-body input:focus {
@@ -1631,6 +1634,10 @@ input[type=checkbox]:checked + label:after {
   }
 }
 @media all and (max-width: 768px) {
+  #why {
+    background: #fff url("../img/why-bg.png") no-repeat center/cover;
+  }
+
   #questions .questions-wrap .quest-right form {
     flex-direction: column;
   }
@@ -1755,8 +1762,12 @@ input[type=checkbox]:checked + label:after {
   }
 }
 @media all and (max-width: 576px) {
+  .close {
+    right: -5px;
+  }
+
   .window-popup-container .sign_wrapper {
-    width: 90%;
+    width: 95%;
   }
 
   .window-popup-container .sign_wrapper .sign-body {
