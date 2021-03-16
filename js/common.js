@@ -17,6 +17,17 @@ $(function(){
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    arrows: false,
+                    // centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 2
+                }
+            },
+        ],
         arrows: true,
         nextArrow: '<button id="next" class="slick-arrow slick-custom-next" type="button"><i class="fa fa-chevron-right"></i></button>',
         prevArrow: '<button id="prev" class="slick-arrow slick-custom-prev" type="button"><i class="fa fa-chevron-left"></i></button>',

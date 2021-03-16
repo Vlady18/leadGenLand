@@ -1421,7 +1421,24 @@ input[type=checkbox]:checked + label:after {
   display: none;
 }
 
+@media all and (max-width: 1350px) {
+  .company-profit {
+    padding: 0 50px;
+  }
+
+  #profit .slick-custom-prev {
+    left: -20px;
+  }
+
+  #profit .slick-custom-next {
+    right: -20px;
+  }
+}
 @media all and (max-width: 992px) {
+  .company-profit {
+    padding: 0;
+  }
+
   #main .container {
     flex-direction: column;
   }
@@ -1655,6 +1672,46 @@ input[type=checkbox]:checked + label:after {
   }
 }
 @media all and (max-width: 576px) {
+  #profit .company-profit .profit-item .prof-head .prof-title {
+    font-size: 12px;
+  }
+
+  #profit .company-profit .profit-item .prof-head .prof-img img {
+    max-width: 30px;
+  }
+
+  #profit .company-profit .profit-item .prof-body .prof-lab {
+    font-size: 9px;
+  }
+
+  #profit .company-profit .profit-item .prof-body .prof-percent {
+    font-size: 14px;
+  }
+
+  #profit .company-profit .profit-item {
+    margin-right: 10px;
+  }
+
+  #profit .company-profit .profit-item .prof-body .prof-lab {
+    margin-bottom: 10px;
+  }
+
+  #profit .company-profit .profit-item {
+    padding: 10px;
+  }
+
+  #profit h3 {
+    font-size: 27px;
+  }
+
+  #profit .subtitle {
+    font-size: 16px;
+  }
+
+  #profit {
+    padding: 50px 0px;
+  }
+
   #questions h3 {
     font-size: 27px;
   }
