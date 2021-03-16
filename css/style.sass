@@ -1297,8 +1297,15 @@ input[type="checkbox"]:checked + label:after
   color: #fff
 .bar
   font-size: 30px
-  color: #fff
+  color: #F16B3F
   display: none
+.mobile-el
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 65%
+  .contact-line
+    display: none
 .mobile-img
   display: none
 @media all and (max-width: 1350px)
@@ -1309,6 +1316,42 @@ input[type="checkbox"]:checked + label:after
   #profit .slick-custom-next
     right: -20px
 @media all and (max-width: 992px)
+  .mobile-el
+    display: none
+    position: absolute
+    background: #1E1D2D
+    top: 0
+    left: 0
+    right: 0
+    padding: 20px
+    .contact-line
+      display: flex
+      justify-content: space-between
+      margin-top: 34px
+      align-items: center
+      margin-bottom: 15px
+      width: 100%
+      a
+        font-size: 22px
+        font-family: Montserrat-Bold
+        text-decoration: none
+        color: #fff
+    nav
+      border-bottom: 1px solid rgba(255, 255, 255, .1)
+      width: 100%
+      padding-bottom: 20px
+      ul
+        flex-direction: column
+        width: 100%
+        align-items: center
+        li
+          margin-bottom: 20px
+          margin-right: 0
+          &:last-child
+            margin-bottom: 0
+
+  .mobile-el.active
+    top: 50px
   .company-profit
     padding: 0
   #main .container
@@ -1318,10 +1361,10 @@ input[type="checkbox"]:checked + label:after
     width: 100%
   #main .main_img
     margin-right: 0
-  .head_wrap nav
-    display: none
-  .head_wrap .control_panel
-    display: none
+  //.head_wrap nav
+  //  display: none
+  //.head_wrap .control_panel
+  //  display: none
   .bar
     display: block
   #econ_calendar .abs-top

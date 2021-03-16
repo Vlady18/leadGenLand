@@ -1413,7 +1413,17 @@ input[type=checkbox]:checked + label:after {
 
 .bar {
   font-size: 30px;
-  color: #fff;
+  color: #F16B3F;
+  display: none;
+}
+
+.mobile-el {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+}
+.mobile-el .contact-line {
   display: none;
 }
 
@@ -1435,6 +1445,51 @@ input[type=checkbox]:checked + label:after {
   }
 }
 @media all and (max-width: 992px) {
+  .mobile-el {
+    display: none;
+    position: absolute;
+    background: #1E1D2D;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+  }
+  .mobile-el .contact-line {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 34px;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .mobile-el .contact-line a {
+    font-size: 22px;
+    font-family: Montserrat-Bold;
+    text-decoration: none;
+    color: #fff;
+  }
+  .mobile-el nav {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .mobile-el nav ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .mobile-el nav ul li {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  .mobile-el nav ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  .mobile-el.active {
+    top: 50px;
+  }
+
   .company-profit {
     padding: 0;
   }
@@ -1450,14 +1505,6 @@ input[type=checkbox]:checked + label:after {
 
   #main .main_img {
     margin-right: 0;
-  }
-
-  .head_wrap nav {
-    display: none;
-  }
-
-  .head_wrap .control_panel {
-    display: none;
   }
 
   .bar {
