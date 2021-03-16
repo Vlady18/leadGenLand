@@ -1130,6 +1130,16 @@ footer .foot-wrap .foot-right .contacts .mail img {
   font-family: Montserrat-Regular, sans-serif;
 }
 
+.window-popup-container.alert-contacts .sign_wrapper .sign-body input {
+  height: 80px;
+  border-radius: 45px;
+  padding: 0px 25px;
+}
+.window-popup-container.alert-contacts .sign_wrapper .sign-body button {
+  height: 90px;
+  border-right: 60px;
+}
+
 .window-popup-container {
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
@@ -1147,9 +1157,10 @@ footer .foot-wrap .foot-right .contacts .mail img {
   z-index: 999;
 }
 .window-popup-container .sign_wrapper {
-  width: 425px;
+  width: 465px;
   margin: 0 auto;
   background: #fff;
+  border-radius: 12px;
 }
 .window-popup-container .sign_wrapper .sign-head {
   background: #ffffff;
@@ -1180,14 +1191,29 @@ footer .foot-wrap .foot-right .contacts .mail img {
 }
 .window-popup-container .sign_wrapper .sign-head ul li a.active {
   color: #000000;
-  border-bottom: 2px solid #1C6AC4;
+  border-bottom: 2px solid #FF855D;
 }
 .window-popup-container .sign_wrapper .sign-body {
-  padding: 20px;
+  padding: 20px 50px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   max-height: 600px;
   overflow-y: auto;
+}
+.window-popup-container .sign_wrapper .sign-body .small {
+  color: rgba(35, 33, 56, 0.5);
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: Montserrat-Regular, sans-serif;
+}
+.window-popup-container .sign_wrapper .sign-body h4 {
+  margin: 0;
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #424242;
+  font-family: Play-bold, sans-serif;
 }
 .window-popup-container .sign_wrapper .sign-body .data-field {
   margin-bottom: 25px;
@@ -1204,10 +1230,11 @@ footer .foot-wrap .foot-right .contacts .mail img {
   border-radius: 4px;
   font-size: 14px;
   line-height: 20px;
+  border-radius: 12px;
   font-family: Montserrat-Regular, sans-serif;
 }
 .window-popup-container .sign_wrapper .sign-body input:focus {
-  border: 2px solid #108956;
+  border: 2px solid #FF9F63;
 }
 .window-popup-container .sign_wrapper .sign-body button {
   width: 100%;
@@ -1255,12 +1282,13 @@ footer .foot-wrap .foot-right .contacts .mail img {
   top: 15px;
 }
 .window-popup-container .reset_pass .sign_wrapper .sign-body p {
-  font-size: 14px;
+  font-size: 17px;
   font-family: Montserrat-Regular, sans-serif;
   line-height: 22px;
-  color: 0;
+  color: #232138;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .window-popup-container.active {
@@ -1282,9 +1310,10 @@ footer .foot-wrap .foot-right .contacts .mail img {
 .close {
   position: absolute;
   color: #ffffff;
-  top: -20px;
-  right: -20px;
+  top: -30px;
+  right: -30px;
   cursor: pointer;
+  max-width: 25px;
 }
 
 input[type=checkbox]:checked,
@@ -1383,19 +1412,19 @@ input[type=checkbox]:checked + label:after {
 .form-input:not(:focus):valid ~ .form-label {
   top: -11px;
   left: 10px;
-  color: #1C6AC4;
+  color: #FF9F63;
 }
 
 .form-input-not:focus ~ .form-label {
   top: -11px;
   left: 10px;
-  color: #1C6AC4;
+  color: #FF9F63;
 }
 
 .form-input-not ~ .form-label.active {
   top: -11px;
   left: 10px;
-  color: #1C6AC4;
+  color: #FF9F63;
 }
 
 .valid {
@@ -1406,7 +1435,7 @@ input[type=checkbox]:checked + label:after {
 
 .btn-yellow {
   font-family: Montserrat-Bold, sans-serif;
-  background: #1C6AC4;
+  background: #FF9F63;
   text-transform: uppercase;
   color: #fff;
 }
@@ -1445,6 +1474,10 @@ input[type=checkbox]:checked + label:after {
   }
 }
 @media all and (max-width: 992px) {
+  header .head_wrap {
+    padding: 15px 0px;
+  }
+
   .mobile-el {
     display: none;
     position: absolute;
@@ -1453,6 +1486,7 @@ input[type=checkbox]:checked + label:after {
     left: 0;
     right: 0;
     padding: 20px;
+    width: 100%;
   }
   .mobile-el .contact-line {
     display: flex;
@@ -1487,7 +1521,9 @@ input[type=checkbox]:checked + label:after {
   }
 
   .mobile-el.active {
-    top: 50px;
+    top: 85px;
+    display: flex;
+    flex-direction: column;
   }
 
   .company-profit {
@@ -1719,6 +1755,14 @@ input[type=checkbox]:checked + label:after {
   }
 }
 @media all and (max-width: 576px) {
+  .window-popup-container .sign_wrapper {
+    width: 90%;
+  }
+
+  .window-popup-container .sign_wrapper .sign-body {
+    padding: 15px;
+  }
+
   #profit .company-profit .profit-item .prof-head .prof-title {
     font-size: 12px;
   }

@@ -1043,6 +1043,15 @@ footer
   margin-top: 55px
   text-align: center
   font-family: Montserrat-Regular, sans-serif
+
+.window-popup-container.alert-contacts
+  .sign_wrapper .sign-body input
+    height: 80px
+    border-radius: 45px
+    padding: 0px 25px
+  .sign_wrapper .sign-body button
+    height: 90px
+    border-right: 60px
 .window-popup-container
   background-color: rgba(0, 0, 0, 0.7)
   position: fixed
@@ -1060,9 +1069,10 @@ footer
   z-index: 999
   .sign_wrapper
     //width: 100%
-    width: 425px
+    width: 465px
     margin: 0 auto
     background: #fff
+    border-radius: 12px
     .sign-head
       background: #ffffff
       padding: 0px 20px
@@ -1088,13 +1098,26 @@ footer
             border-bottom: 2px solid transparent
           a.active
             color: #000000
-            border-bottom: 2px solid #1C6AC4
+            border-bottom: 2px solid #FF855D
     .sign-body
-      padding: 20px
+      padding: 20px 50px
       border-bottom-left-radius: 4px
       border-bottom-right-radius: 4px
       max-height: 600px
       overflow-y: auto
+      .small
+        color: rgba(35, 33, 56, 0.5)
+        font-size: 12px
+        text-align: center
+        margin-top: 20px
+        font-family: Montserrat-Regular, sans-serif
+      h4
+        margin: 0
+        font-size: 30px
+        margin-bottom: 15px
+        text-align: center
+        color: #424242
+        font-family: Play-bold, sans-serif
       .data-field
         margin-bottom: 25px
       input
@@ -1109,9 +1132,10 @@ footer
         border-radius: 4px
         font-size: 14px
         line-height: 20px
+        border-radius: 12px
         font-family: Montserrat-Regular, sans-serif
         &:focus
-          border: 2px solid #108956
+          border: 2px solid #FF9F63
 
       button
         width: 100%
@@ -1156,12 +1180,14 @@ footer
 
       .sign-body
         p
-          font-size: 14px
+          font-size: 17px
           font-family: Montserrat-Regular, sans-serif
           line-height: 22px
-          color: 000
+          color: #232138
           margin: 0
-          margin-bottom: 10px
+          margin-bottom: 40px
+          text-align: center
+
 .window-popup-container.active
   display: flex
 .iti.iti--allow-dropdown
@@ -1175,9 +1201,10 @@ footer
 .close
   position: absolute
   color: #ffffff
-  top: -20px
-  right: -20px
+  top: -30px
+  right: -30px
   cursor: pointer
+  max-width: 25px
 
 
 input[type="checkbox"]:checked,
@@ -1273,16 +1300,16 @@ input[type="checkbox"]:checked + label:after
 .form-input:not(:focus):valid~.form-label
   top: -11px
   left: 10px
-  color: #1C6AC4
+  color: #FF9F63
 
 .form-input-not:focus ~ .form-label
   top: -11px
   left: 10px
-  color: #1C6AC4
+  color: #FF9F63
 .form-input-not ~ .form-label.active
   top: -11px
   left: 10px
-  color: #1C6AC4
+  color: #FF9F63
 .valid
   font-family: Roboto-Regular, sans-serif
   margin-top: 5px
@@ -1292,7 +1319,7 @@ input[type="checkbox"]:checked + label:after
 
 .btn-yellow
   font-family: Montserrat-Bold, sans-serif
-  background: #1C6AC4
+  background: #FF9F63
   text-transform: uppercase
   color: #fff
 .bar
@@ -1316,6 +1343,8 @@ input[type="checkbox"]:checked + label:after
   #profit .slick-custom-next
     right: -20px
 @media all and (max-width: 992px)
+  header .head_wrap
+    padding: 15px 0px
   .mobile-el
     display: none
     position: absolute
@@ -1324,6 +1353,7 @@ input[type="checkbox"]:checked + label:after
     left: 0
     right: 0
     padding: 20px
+    width: 100%
     .contact-line
       display: flex
       justify-content: space-between
@@ -1351,7 +1381,9 @@ input[type="checkbox"]:checked + label:after
             margin-bottom: 0
 
   .mobile-el.active
-    top: 50px
+    top: 85px
+    display: flex
+    flex-direction: column
   .company-profit
     padding: 0
   #main .container
@@ -1487,6 +1519,10 @@ input[type="checkbox"]:checked + label:after
   #faq #accordion h4
     padding: 15px
 @media all and (max-width: 576px)
+  .window-popup-container .sign_wrapper
+    width: 90%
+  .window-popup-container .sign_wrapper .sign-body
+    padding: 15px
   #profit .company-profit .profit-item .prof-head .prof-title
     font-size: 12px
   #profit .company-profit .profit-item .prof-head .prof-img

@@ -12,6 +12,11 @@ $(function(){
 
     });
 
+    $('.bar i').on('click', function(){
+        $('.mobile-el.mobile-menu').toggleClass('active')
+        $(this).toggleClass('fa-bars fa-times')
+    })
+
 
     $('.company-profit').slick({
         infinite: true,
@@ -77,7 +82,7 @@ $(function(){
     });
 
 
-    $('i.close').on('click', function(e){
+    $('i.close, img.close').on('click', function(e){
         e.preventDefault();
         $('.window-popup-container').removeClass('active');
     });

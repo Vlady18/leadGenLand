@@ -27,7 +27,9 @@
 <div class="window-popup-container sign-container">
     <div class="window-popup" style="position: absolute; top: 55px;">
         <div class="sign_wrapper">
-            <i class="fa fa-times close"></i>
+<!--            <i class="fa fa-times close"></i>-->
+            <img src="img/close.svg" class="close" alt="">
+
             <div class="sign-head">
                 <ul>
                     <li><a href="#" class="active" data-sign="in">Войти</a></li>
@@ -114,7 +116,8 @@
 <div class="window-popup-container forgot-container">
     <div class="window-popup reset_pass">
         <div class="sign_wrapper">
-            <i class="fa fa-times close"></i>
+<!--            <i class="fa fa-times close"></i>-->
+            <img src="img/close.svg" class="close" alt="">
 
             <div class="sign-head">
                 ЗАБЫЛИ ПАРОЛЬ
@@ -134,10 +137,60 @@
     </div>
 </div>
 
+
+<div class="window-popup-container alert-contacts ">
+    <div class="window-popup reset_pass">
+        <div class="sign_wrapper">
+<!--            <i class="fa fa-times close"></i>-->
+            <img src="img/close.svg" class="close" alt="">
+
+
+            <div class="sign-body">
+                <h4>Оставьте ваши контакты</h4>
+                <p>Мы перезвоним вам в течение 10 минут и поможем открыть счёт</p>
+                <form id="contact-alert">
+                    <div class="data-field">
+                        <input autocomplete="off" type="text" required class="form-input" placeholder="Введите ваше имя">
+                    </div>
+                    <div class="data-field">
+                        <input autocomplete="off" type="text" required class="form-input" placeholder="Введите ваш телефон" >
+                    </div>
+                    <button class="btn btn-green call-newpass">Открыть счёт</button>
+                    <div class="small">
+                        Нажимая на кнопку, вы соглашаетесь
+                        с политикой конфиденциальности
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="window-popup-container alert-contacts thank-modal ">
+    <div class="window-popup reset_pass">
+        <div class="sign_wrapper">
+<!--            <i class="fa fa-times close"></i>-->
+            <img src="img/close.svg" class="close" alt="">
+            <div class="sign-body">
+                <h4>Благодарим за доверие!</h4>
+                <p>Мы перезвоним вам в течение 10 минут </p>
+                <div class="body-img">
+                    <img src="img/thank.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="window-popup-container reset_container">
     <div class="window-popup reset_pass">
         <div class="sign_wrapper">
-            <i class="fa fa-times close"></i>
+<!--            <i class="fa fa-times close"></i>-->
+            <img src="img/close.svg" class="close" alt="">
+
             <div class="sign-head">
                 СБРОС ПАРОЛЯ
                 <!--                <img class="close" src="/assets/site/img/close.png" alt="">-->
@@ -164,7 +217,9 @@
 <div class="window-popup-container checkEmail-container">
     <div class="window-popup reset_pass check">
         <div class="sign_wrapper">
-            <i class="fa fa-times close"></i>
+<!--            <i class="fa fa-times close"></i>-->
+            <img src="img/close.svg" class="close" alt="">
+
             <div class="sign-head">
                 ПРОВЕРЬТЕ СВОЙ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ
                 <!--                <img class="close" src="/assets/site/img/close.png" alt="">-->
@@ -179,7 +234,8 @@
 <div class="window-popup-container thank-popup-container">
     <div class="window-popup reset_pass thank-popup">
         <div class="sign_wrapper">
-            <i class="fa fa-times close"></i>
+<!--            <i class="fa fa-times close"></i>-->
+            <img src="img/close.svg" class="close" alt="">
 
             <div class="sign-head">
                 <div class="h4 suc">Пароль обновлен</div>
@@ -207,7 +263,7 @@
 <!--                        <li><a href="#now">FAQ</a></li>-->
 <!--                    </ul>-->
 <!--                </nav>-->
-                <div class="mobile-el active">
+                <div class="mobile-el mobile-menu">
                     <nav>
                         <ul>
                             <li><a href="/trading.html">О Нас</a></li>
@@ -984,31 +1040,6 @@
     });
 </script>
 <script src="js/jquery.spincrement.min.js"></script>
-
-<script>
-    function countup(className) {
-        var countBlockTop = $("." + className).offset().top;
-        var windowHeight = window.innerHeight;
-        var show = true;
-
-        $(window).scroll(function () {
-            if (show && (countBlockTop < $(window).scrollTop() + windowHeight)) {
-                show = false;
-
-                $('.' + className).spincrement({
-                    from: 1,
-                    duration: 2500,
-                });
-            }
-        })
-    }
-
-
-    $(function () {
-        countup("counter", $(".counter").text());
-        // countup("count2", $(".count2").text());
-    });
-</script>
 
 <script src="js/common.js"></script>
 <script>
